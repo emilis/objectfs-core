@@ -1,0 +1,7 @@
+{
+    "name": "objectfs-core",
+    "version": "0.1",
+    "description": "ObjectFS core library.",
+    "keywords": ["data exchange", "data translation"],
+    "author": "Emilis Dambauskas (http://emilis.github.com/) <emilis.d@gmail.com>"
+}
