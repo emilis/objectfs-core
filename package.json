@@ -1,14 +1,14 @@
 {
-    "name":     "objectfs-core",
-    "version":  "0.1.0",
-    "main":     "index.js",
+    "name":         "objectfs-core",
+    "description":  "ObjectFS core library.",
+    "version":      "0.1.0",
+    "main":         "index.js",
     "directories": {
         "lib":  "lib" },
-    "maintainers:   [
-        { "name": "Emilis Dambauskas", "email": "emilis.d@gmail.com", "web": "http://emilis.github.com/" }],
-    "description":  "ObjectFS core library.",
     "repositories": [{
             "type":"git",
             "url":"lunar-orbiter:git/objectfs-core"
-        }]
+        }],
+    "maintainers":   [
+        { "name": "Emilis Dambauskas", "email": "emilis.d@gmail.com", "web": "http://emilis.github.com/" }],
 }
