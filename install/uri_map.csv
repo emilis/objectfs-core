@@ -1,0 +1,5 @@
+scheme  authority   path        package
+csv     *           *           objectfs-core/drivers/csv
+*       *           *.csv       objectfs-core/drivers/csv
+sqlite  *           *           ofs-sqlite
+*       *           *.sqlite    ofs-sqlite
