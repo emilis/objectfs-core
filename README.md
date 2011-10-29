@@ -2,7 +2,7 @@
 
 Core library for ObjectFS.
 
-*This is still under heavy development. Don&#39;t expect anything to work.*
+**This is still under heavy development. Don&#39;t expect anything to work.**
 
 ## Usage
 
@@ -14,6 +14,7 @@ var ofs = require("objectfs-core/ofs");
 ofs.list("csv:/tmp/passwd?separator=:,noSchemaLine=true,schema=user:x:uid:gid:name:home:shell");
 ```
 OR
+
 ```javascript
 // Same as above, but use the CSV driver directly:
 var uriMapper = require("objectfs-core/uriMapper");
@@ -21,16 +22,24 @@ var passwd = uriMapper.getFs("csv:/tmp/passwd?separator=:,noSchemaLine=true,sche
 passwd.list();
 ```
 OR
+
 ```javascript
 // Same as above, but instantiate the CSV driver yourself:
 var csv = require("objectfs-core/drivers/csv");
-csv.connect({path:"/tmp/passwd", params:{separator:":", noSchemaLine:true, schema="user:x:uid:gid:name:home:shell"}});
+csv.connect({
+    path:"/tmp/passwd",
+    params: {
+        separator:":",
+        noSchemaLine:true,
+        schema="user:x:uid:gid:name:home:shell"
+        }
+});
 csv.list();
 ```
 
 ### API summary
 
-*objectfs-core/ofs*
+#### objectfs-core/ofs
 
 <table><tbody>
 <tr><td align="right">Object</td>
@@ -46,14 +55,14 @@ csv.list();
     <td><b>list</b> (URI, filter, options)</td>
     <td>Get an array of records matching the criteria.</td></tr>
 <tr><td align="right"><a href="https://developer.mozilla.org/en/JavaScript/Guide/Iterators_and_Generators">Iterator</a></td>
-    <td><b>iterate</b> (URI, filter, options)</td>
+    <td nowrap="nowrap"><b>iterate</b> (URI, filter, options)</td>
     <td>A generator function that returns an iterator over all records in the storage matching the criteria.</td></tr>
 <tr><td align="right">Number</td>
     <td><b>mirror</b> (URI, URI)</td>
     <td>Copies records from one storage into another. Returns the number of records transfered.</td></tr>
 </tbody></table>
 
-*objectfs-core/ofs-pkg*
+#### objectfs-core/ofs-pkg
 
 <table><tbody>
 <tr><td align="right"><a href="https://developer.mozilla.org/en/JavaScript/Guide/Iterators_and_Generators">Iterator</a></td>
@@ -78,7 +87,7 @@ csv.list();
         Throws error on the first package that is not installed.</td></tr>
 </tbody></table>
 
-*objectfs-core/uriMapper*
+#### objectfs-core/uriMapper
 
 <table><tbody>
 <tr><td align="right">Object</td>
@@ -89,8 +98,8 @@ csv.list();
     <td>Finds a module name to work as a driver for the storage specified in uri.</td></tr>
 <tr><td align="right">Object</td>
     <td><b>parseUri</b> (uri)</td>
-    <td>Splits a given uri String into parts. Example:<br>
-        "http://example.org/path/to/file?p1=v1,p2=v2#fragment" would become:<br>
+    <td>Splits a given uri String into parts.<br>
+    E.g.: <code>http://example.org/path/to/file?p1=v1,p2=v2#fragment</code> would become:<br>
         <pre>{ schema: "http",
   authority: "example.org",
   path: "/path/to/file",
@@ -98,7 +107,7 @@ csv.list();
   params: { p1: "v1",
             p2: "v2" },
   fragment: "fragment"
-}</pre><br><em>Note that a comma "," is used instead of ampersand "&amp;" to separate query parameters.</em></td></tr>
+}</pre><em>Note that a comma "," is used instead of ampersand "&amp;" to separate query parameters.</em></td></tr>
 </tbody></table>
 
 ### Requirements
@@ -115,7 +124,7 @@ This is free software, and you are welcome to redistribute it under certain cond
 
 ### Thanks
 
-- RingoJS developers and maintainers.
+- [RingoJS](http://ringojs.org/) developers and maintainers.
 - Open Society Institute for funding the development of [KąVeikiaValdžia.lt](http://kaveikiavaldzia.lt/) during which this concept was born.
 
 ### Author contact
