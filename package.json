@@ -7,8 +7,13 @@
         "lib":  "lib" },
     "repositories": [{
             "type":"git",
-            "url":"lunar-orbiter:git/objectfs-core"
+            "url":"git://github.com/emilis/objectfs-core.git"
         }],
+    "objectfs-uris": [
+        { "scheme":"csv", "module":"objectfs-core/drivers/csv" },
+        { "path": "*.csv", "module":"objectfs-core/drivers/csv" }],
     "maintainers":   [
         { "name": "Emilis Dambauskas", "email": "emilis.d@gmail.com", "web": "http://emilis.github.com/" }],
+    "licenses":     [
+        { "type": "GPLv3", "url": "http://www.gnu.org/licenses/gpl.txt" }]
 }
