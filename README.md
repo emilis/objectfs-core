@@ -94,7 +94,7 @@ csv.list();
     <td><b>getFs</b> (uri)</td>
     <td>Creates an ObjectFS storage driver instance and connects it to the specified storage.</td></tr>
 <tr><td align="right">Object</td>
-    <td><b>findPackageForUri</b> (uri)</td>
+    <td><b>findModuleForUri</b> (uri)</td>
     <td>Finds a module name to work as a driver for the storage specified in uri.</td></tr>
 <tr><td align="right">Object</td>
     <td><b>parseUri</b> (uri)</td>
