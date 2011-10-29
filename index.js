@@ -27,12 +27,15 @@ var objects = require("ringo/utils/objects");
 
 
 /**
- *
+ * Creates a clone for a module specified by module_id.
  */
-exports.cloneModule = function(module_id) {
+exports.cloneModule = function(module_id, child) {
 
-    return objects.clone(
-            require(module_id),
-            {},
-            true);
+    child = child || {};
+
+    var parent = require(module_id);
+    child = objects.clone(parent, child, true);
+    child.parent = parent;
+
+    return child;
 };
