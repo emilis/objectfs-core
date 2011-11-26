@@ -16,7 +16,7 @@ ofs.list("csv:/tmp/passwd?separator=:,noSchemaLine=true,schema=user:x:uid:gid:na
 OR
 
 ```javascript
-// Same as above, but use the CSV driver directly:
+// Same as above, but use the CSV wrapper directly:
 var uriMapper = require("objectfs-core/uriMapper");
 var passwd = uriMapper.getFs("csv:/tmp/passwd?separator=:,noSchemaLine=true,schema=user:x:uid:gid:name:home:shell");
 passwd.list();
@@ -24,8 +24,8 @@ passwd.list();
 OR
 
 ```javascript
-// Same as above, but instantiate the CSV driver yourself:
-var csv = require("objectfs-core/drivers/csv");
+// Same as above, but instantiate the CSV wrapper yourself:
+var csv = require("objectfs-core/wrappers/csv");
 csv.connect({
     path:"/tmp/passwd",
     params: {
@@ -92,10 +92,10 @@ csv.list();
 <table><tbody>
 <tr><td align="right">Object</td>
     <td><b>getFs</b> (uri)</td>
-    <td>Creates an ObjectFS storage driver instance and connects it to the specified storage.</td></tr>
+    <td>Creates an ObjectFS storage wrapper instance and connects it to the specified storage.</td></tr>
 <tr><td align="right">Object</td>
     <td><b>findModuleForUri</b> (uri)</td>
-    <td>Finds a module name to work as a driver for the storage specified in uri.</td></tr>
+    <td>Finds a module name to work as a wrapper for the storage specified in uri.</td></tr>
 <tr><td align="right">Object</td>
     <td><b>parseUri</b> (uri)</td>
     <td>Splits a given uri String into parts.<br>

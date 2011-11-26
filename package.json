@@ -10,8 +10,8 @@
             "url":"git://github.com/emilis/objectfs-core.git"
         }],
     "objectfs-uris": [
-        { "scheme":"csv", "module":"objectfs-core/drivers/csv" },
-        { "path": "*.csv", "module":"objectfs-core/drivers/csv" }],
+        { "scheme":"csv", "module":"objectfs-core/wrappers/csv" },
+        { "path": "*.csv", "module":"objectfs-core/wrappers/csv" }],
     "maintainers":   [
         { "name": "Emilis Dambauskas", "email": "emilis.d@gmail.com", "web": "http://emilis.github.com/" }],
     "licenses":     [
