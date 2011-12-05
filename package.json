@@ -1,6 +1,7 @@
 {
     "name":         "objectfs-core",
     "description":  "ObjectFS core library.",
+    "homepage":     "https://github.com/emilis/objectfs-core",
     "version":      "0.1.0",
     "main":         "index.js",
     "directories": {
